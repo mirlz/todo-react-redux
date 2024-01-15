@@ -1,12 +1,15 @@
-import { useState } from 'react'
-import './App.css'
+import 'normalize.css';
+import '@mantine/core/styles.css';
+import './App.css';
+import { MantineProvider } from '@mantine/core';
+
+import TodoList from './components/TodoList'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-    </>
+    <MantineProvider defaultColorScheme="dark">
+      <TodoList />
+    </MantineProvider>
   )
 }
 
